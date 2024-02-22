@@ -2,17 +2,35 @@ import { SignalDispatcher } from "strongly-typed-events";
 
 export default class EnForm {
   private _onSubmit = new SignalDispatcher();
+  private _onValidate = new SignalDispatcher();
   private _onError = new SignalDispatcher();
   public submit: boolean = true;
+  public submitPromise: boolean | Promise<any> = false;
+  public validate: boolean = true;
+  public validatePromise: boolean | Promise<any> = false;
+
+  private static instance: EnForm;
+
+  private constructor() {}
+
+  public static getInstance(): EnForm {
+    if (!EnForm.instance) {
+      EnForm.instance = new EnForm();
+    }
+
+    return EnForm.instance;
+  }
 
   public dispatchSubmit() {
     this._onSubmit.dispatch();
-    console.log("dispatchSubmit");
+  }
+
+  public dispatchValidate() {
+    this._onValidate.dispatch();
   }
 
   public dispatchError() {
     this._onError.dispatch();
-    console.log("dispatchError");
   }
 
   public submitForm() {
@@ -24,17 +42,18 @@ export default class EnForm {
       const enModal = document.getElementById("enModal");
       if (enModal) enModal.classList.add("is-submitting");
       enForm.click();
-      console.log("submitForm");
     }
   }
 
   public get onSubmit() {
-    // console.log("onSubmit");
     return this._onSubmit.asEvent();
   }
 
   public get onError() {
-    // console.log("onError");
     return this._onError.asEvent();
+  }
+
+  public get onValidate() {
+    return this._onValidate.asEvent();
   }
 }

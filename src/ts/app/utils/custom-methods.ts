@@ -2,6 +2,7 @@ declare global {
   interface Window {
     enOnSubmit: any;
     enOnError: any;
+    enOnValidate: any;
   }
 }
 export const body = document.body;

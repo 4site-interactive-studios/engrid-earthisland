@@ -165,3 +165,16 @@ div:not(.manual-form-layout) {
     background-color: var(--client-error-red-faded, $client-error-red-faded);
   }
 }
+
+.en__field--validationFailed:has(.vgs-collect-container__valid)
+  .en__field__error {
+  border-color: var(
+    --client-error-red-grayscale,
+    $client-error-red-grayscale
+  ) !important;
+  background-color: var(
+    --client-error-red-grayscale,
+    $client-error-red-grayscale
+  ) !important;
+  color: var(--client-white, $client-white) !important;
+}

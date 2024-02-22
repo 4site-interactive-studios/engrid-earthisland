@@ -8,9 +8,15 @@
   padding: 0.25rem 0.5rem;
   color: $client-white;
   font-size: 0.75rem;
-  border-bottom-left-radius: var(--client-input-border-radius,$client-input-border-radius);
-  border-bottom-right-radius: var(--client-input-border-radius,$client-input-border-radius);
-  background-color: var(--client-error-red,$client-error-red);
+  border-bottom-left-radius: var(
+    --client-input-border-radius,
+    $client-input-border-radius
+  );
+  border-bottom-right-radius: var(
+    --client-input-border-radius,
+    $client-input-border-radius
+  );
+  background-color: var(--client-error-red, $client-error-red);
   order: 3;
 }
 
@@ -20,7 +26,8 @@
   .en__field--telephone.en__field--validationFailed input,
   .en__field--number.en__field--validationFailed input,
   .en__field--textarea.en__field--validationFailed textarea,
-  .en__field--select.en__field--validationFailed select {
+  .en__field--select.en__field--validationFailed select,
+  .en__field--vgs.en__field--validationFailed .en__field__input {
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
   }
@@ -87,7 +94,10 @@
   .en__field.en__field--tripleselect.en__field--validationFailed.has-value
   .en__field__element,
 #engrid.fancy-errors .en__field--validationFailed.has-value .en__field__error {
-  border-color: var(--client-error-red-grayscale,$client-error-red-grayscale);
-  background-color: var(--client-error-red-grayscale,$client-error-red-grayscale);
-  color: var(--client-white,$client-white);
+  border-color: var(--client-error-red-grayscale, $client-error-red-grayscale);
+  background-color: var(
+    --client-error-red-grayscale,
+    $client-error-red-grayscale
+  );
+  color: var(--client-white, $client-white);
 }
