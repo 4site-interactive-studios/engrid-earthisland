@@ -1,11 +1,11 @@
 $slicer-breakpoints: 0 400px 600px 1024px 1200px;
 
 $client-white: #ffffff;
-$client-black: #4D4D4D;
+$client-black: #4d4d4d;
 $client-gray: #8a8a8a;
 $client-light-gray: #cacaca;
 $client-cta: #208096;
-$client-cta-hover: #22A3CB;
+$client-cta-hover: #22a3cb;
 
 $client-prefooter-background-color: #d0e2e7;
 $client-footer-background-color: #20809e;
@@ -45,6 +45,7 @@ $client-submit-button-background-color: $client-cta;
 $client-submit-button-background-color-hover: $client-cta-hover;
 $client-submit-button-border-color: $client-cta;
 $client-submit-button-font-color: $client-white;
+$client-submit-button-font-size: 1.33248em;
 
 $client-checkmark-background-color: $client-cta;
 $client-checkmark-border-color: $client-cta;
